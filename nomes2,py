@@ -1,0 +1,5 @@
+lista_nomes = ["chocolate" , "yasmin"]
+for nome in lista_nomes:
+  print(nome)
+  for i in nome:
+      print(i)
