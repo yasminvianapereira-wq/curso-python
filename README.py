@@ -1,2 +1,2 @@
 # curso-python
-para vcs o esdutos
+para vcs o estudos 
