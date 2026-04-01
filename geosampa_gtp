@@ -1,0 +1,51 @@
+class Vaga:
+    def __init__(self, numero, tipo):
+        self.numero = numero
+        self.tipo = tipo  # "verde" ou "normal"
+        self.ocupada = False
+
+    def ocupar(self):
+        self.ocupada = True
+
+    def liberar(self):
+        self.ocupada = False
+
+
+class Carro:
+    def __init__(self, placa, tipo):
+        self.placa = placa
+        self.tipo = tipo  # "eletrico", "hibrido", "combustao"
+
+
+def estacionar(carro, vagas):
+    for vaga in vagas:
+        # Se for vaga verde, só aceita elétrico ou híbrido
+        if vaga.tipo == "verde" and carro.tipo in ["eletrico", "hibrido"] and not vaga.ocupada:
+            vaga.ocupar()
+            print(f"Carro {carro.placa} estacionado na vaga verde {vaga.numero}")
+            return
+        
+        # Vaga normal aceita qualquer carro
+        if vaga.tipo == "normal" and not vaga.ocupada:
+            vaga.ocupar()
+            print(f"Carro {carro.placa} estacionado na vaga normal {vaga.numero}")
+            return
+
+    print("Nenhuma vaga disponível")
+
+
+# Criando vagas
+vagas = [
+    Vaga(1, "verde"),
+    Vaga(2, "verde"),
+    Vaga(3, "normal"),
+    Vaga(4, "normal"),
+]
+
+# Criando carros
+carro1 = Carro("ABC-1234", "eletrico")
+carro2 = Carro("XYZ-9999", "combustao")
+
+# Teste
+estacionar(carro1, vagas)
+estacionar(carro2, vagas)
