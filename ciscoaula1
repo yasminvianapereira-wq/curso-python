@@ -1,0 +1,8 @@
+oq eu endi como faz qualquer promaga em python
+
+Obviamente, essa composição precisa ser correta em muitos sentidos:
+
+em ordem alfabética - um programa precisa ser escrito em um script reconhecível, como romano, cirílico etc.
+lexicamente - cada linguagem de programação tem seu dicionário e você precisa dominá-lo; felizmente, é muito mais simples e menor do que o dicionário de qualquer linguagem natural;
+sintaticamente - cada idioma tem suas regras e elas devem ser obedecidas;
+semanticamente - o programa tem que fazer sentido.
